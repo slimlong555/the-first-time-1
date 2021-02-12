@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易时间显示</title>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }</style>
+  </head>
+  <body>
+    <style>#time {
+        margin-top: 200px;
+
+        font-size: 60px;
+        text-align: center;
+      }</style>
+    <div id="time">00:00:00</div>
+    <script>function sayTime() {
+  var now = new Date();
+  console.log(now);
+  var second = now.getSeconds();
+  var min = now.getMinutes();
+  var hour = now.getHours();
+  var time = document.querySelector("#time");
+  time.innerHTML = hour + ":" + min + ":" + second;
+}
+
+setInterval(sayTime, 1000);</script>
+  </body>
+</html>
